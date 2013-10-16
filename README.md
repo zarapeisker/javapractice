@@ -1,4 +1,4 @@
 javapractice
 ============
 
-This is where my java exercises go.
+I'm learning Java in 7 days: This is where my practice exercises go.
