@@ -4,7 +4,7 @@ public class SimpleDotCom {
   int numOfHits = 0;
 
   public void setLocationCells(int[] locs) {
-    locationsCells = locs;
+    locationCells = locs;
   }
 
   public String checkYourself(String stringGuess) {
@@ -12,7 +12,7 @@ public class SimpleDotCom {
     String result = "miss";
     for (int cell : locationCells) {
       if (guess == cell) {
-        result = "hit"
+        result = "hit";
         numOfHits++;
         break;
       }

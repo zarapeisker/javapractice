@@ -12,9 +12,9 @@ public class SimpleDotComGame {
     //makes random numfor the first cell
 
     int[] locations = {randomNum, randomNum+1, randomNum+2};
-    theDotCom.setLocationsCells(locations);
+    theDotCom.setLocationCells(locations);
     //give the dotcomits locations(the array)
-    boolian isAlive = true;
+    boolean isAlive = true;
     //make a booolean variable to track whether the game is still alive
 
     while(isAlive == true) {
