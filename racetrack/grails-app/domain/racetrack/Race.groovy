@@ -2,6 +2,17 @@ package racetrack
 
 class Race {
 
+    static hasMany = [registrations:Registration]
+    //could add more relationships after Registration, separated by commas
+    //ActiveRecord knows what the singular is, but here we must specify
+    //name (of field) :value (datatype)
+
+    String toString(){
+      return "${name}, ${startDate.format('MM/dd/yyyy')}"
+    }
+
+    //in Groovy and Java, creates a string representation of the objects associated with race
+
     static constraints = {
       name(blank:false, maxSize:50)
       startDate(validator: {return (it > new Date())})

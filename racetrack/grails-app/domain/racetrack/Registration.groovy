@@ -1,15 +1,8 @@
 package racetrack
 
 class Registration {
-    String name
-    Date dateOfBirth
-    String gender
-    String address
-    String city
-    String state
-    String zipcode
-    String email
-    Date dateCreated //Special name
+
+    static belongsTo = [race:Race, runner:Runner]
     //Grails will auto fill in the value when the instance is saved for the first time.
 
     //domain classes hold the data
@@ -29,5 +22,12 @@ class Registration {
       //add code here
     //}
     static constraints = {
+      race()
+      runner()
+      paid()
+      dateCreated()
     }
+
+    Boolean paid
+    Date dateCreated
 }
