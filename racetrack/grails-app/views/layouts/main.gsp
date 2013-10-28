@@ -18,9 +18,10 @@
 		<r:layoutResources />
 	</head>
 	<body>
+		<g:render template="/layouts/header" />
 		<!-- <div id="grailsLogo" role="banner"><a href="http://grails.org"><img src="${resource(dir: 'images', file: 'grails_logo.png')}" alt="Grails"/></a></div> -->
-		<!-- <g:> is similar to ${} -->
-		<g:layoutBody/>
+		<!-- the g tag is similar to ${} -->
+		<g:layoutBody />
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>
 		<g:javascript library="application"/>
