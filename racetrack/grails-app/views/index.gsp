@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
+		<!-- the line above merges main.gsp with index.gsp -->
 		<title>Welcome to Grails</title>
 		<style type="text/css" media="screen">
 			#status {
@@ -100,6 +101,7 @@
 				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
 					<li>${plugin.name} - ${plugin.version}</li>
 				</g:each>
+				<!-- iterates over each item in a collection / in this case diplays each controller in our Grails app -->
 			</ul>
 		</div>
 		<div id="page-body" role="main">
@@ -114,6 +116,8 @@
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
 						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+						<!-- g:link creates a link to the named controller -->
+						<!-- to link to a controller action: <g:link controller="user" action="create">New User</g:link> -->
 					</g:each>
 				</ul>
 			</div>
